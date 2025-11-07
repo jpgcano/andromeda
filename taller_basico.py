@@ -280,3 +280,26 @@ numerosPares=[]
 for i in range(100):
     numerosPares.append(i)
 print(f"Los numeros pares son: {numerosPares}")
+
+print   ("------------------------------")
+print   ("Ejercicio 24 - nivel 3")
+"""Eliminar duplicados."""
+frutas = [
+    "manzana",
+    "pera",
+    "uva",
+    "mango",
+    "manzana",
+    "fresa",
+    "pera",
+    "sandía",
+    "kiwi",
+    "mango"
+]
+print(frutas)
+for fruta in frutas:
+    frutas.count(fruta)
+    if frutas.count(fruta)>0:
+        frutas.remove(fruta)
+    print(fruta)
+print(frutas)
