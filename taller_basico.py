@@ -25,9 +25,14 @@ print   (f"La suma de {num1} y {num2} es {suma}")
 print   ("------------------------------")
 
 print   ("ejercio 3 ")
-base   = float (input("Ingrese la base del rectángulo: "))
-altura = float (input("Ingrese la altura del rectángulo: "))
-area   = base * altura
+base    = float (input("Ingrese la base del rectángulo: "))
+altura  = float (input("Ingrese la altura del rectángulo: "))
+area    = base * altura
+print   (f"El area del triangulo es: {area}")
 print   ("------------------------------")
 
-print   ("ejercio 4 ")
+print       ("ejercio 4 ")
+celsius     = float(input("Ingrese grados celsius"))
+Fahrenheit  = (celsius*1.8)+32
+print       (f"los grados es fahrenheit es: {Fahrenheit}°F")
+
