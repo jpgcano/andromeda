@@ -198,3 +198,15 @@ while seguir == True:
         seguir = False
     else:
         print("Fallaste, sigue intentando")
+
+print   ("------------------------------")
+print   ("Ejercicio 18 - nivel 2")
+"""Sumar hasta que el usuario escriba 0."""
+numero =0
+acumulador =0
+while True:
+    n = int(input("Ingrasa el numero a sumar"))
+    if n ==0:
+        break
+    acumulador+=n
+print(f"El resultado es : {acumulador}")
