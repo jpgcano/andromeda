@@ -28,3 +28,28 @@ while i >= 0:
     print(i)
     i -= 1
 """
+"""#--------quinto punto--------
+
+import random 
+print ("Adivina el numero entre 1 y 10")
+numero_secreto = int(random.randint(1, 10))
+while True:
+    adivina = int(input("ingresa tu numero: "))
+    if numero_secreto > adivina:
+        print("El numero secreto es mayor que ", adivina)
+    if numero_secreto < adivina:
+        print("El numero secreto es menor que ", adivina)
+    if numero_secreto == adivina:
+        print("Felicidades, has adivinado el numero!")
+        break
+"""
+
+#-------sexto punto--------
+suma= 0 
+numero = 0 
+while True:
+    numero = int(input("ingresa el numero para sumar:" ))
+    if numero== 0:
+        break
+    suma = suma + numero
+print("el total de la suma es: ", suma)
