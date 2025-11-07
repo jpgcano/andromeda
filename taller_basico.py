@@ -159,7 +159,7 @@ for i in range(1,10):
     print(i)
 
 print   ("------------------------------")
-print   ("Ejercicio 13 - nivel 2")
+print   ("Ejercicio 14 - nivel 2")
 """Sumatoria del 1 al n.."""
 acumulador =0
 n = int(input("Ingrasa el numero a sumar"))
@@ -168,9 +168,18 @@ for i in range(n):
 print(f"el acumulado es: {acumulador}")
 
 print   ("------------------------------")
-print   ("Ejercicio 14 - nivel 2")
+print   ("Ejercicio 15 - nivel 2")
 """Tabla de multiplicar."""
 
 tabla = int(input("Ingrese tabla"))
 for i in range(1,11):
     print(f"{tabla} * {i} = {tabla*i}")
+
+
+print   ("------------------------------")
+print   ("Ejercicio 16 - nivel 2")
+"""Contador regresivo con while.."""
+contador = 10
+while contador >=0:
+    print(contador)
+    contador-=1
