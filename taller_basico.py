@@ -210,3 +210,53 @@ while True:
         break
     acumulador+=n
 print(f"El resultado es : {acumulador}")
+
+
+
+"""
+    Objetivo: Crear, recorrer, modificar y eliminar elementos en listas.
+    Nivel 4 — Listas y Colecciones
+"""
+
+print   ("------------------------------")
+
+print   ("------------------------------")
+print   ("Ejercicio 19 - nivel 3")
+"""Lista de frutas."""
+frutas = [
+    "manzana","banana", "cereza", "pera",  "uva",
+    "mango",  "kiwi",   "sandía",  "melón","naranja",
+    "mandarina", "limón","fresa", "arándano", "piña",
+    "papaya","maracuyá","guayaba","ciruela", "granada"
+]
+for fruta in frutas:
+    print(fruta)
+print   ("------------------------------")
+print   ("Ejercicio 20 - nivel 3")
+"""Agregar y eliminar frutas."""
+frutas = [
+    "manzana","banana", "cereza", "pera",  "uva",
+    "mango",  "kiwi",   "sandía",  "melón","naranja",
+    "mandarina", "limón","fresa", "arándano", "piña",
+    "papaya","maracuyá","guayaba","ciruela", "granada"
+]
+print(frutas)
+frutas.remove("mango")
+print(frutas)
+frutas.append("mango")
+print(frutas)
+
+
+print   ("------------------------------")
+print   ("Ejercicio 21 - nivel 3")
+"""Lista de números y promedio.."""
+frutas = [
+    "manzana","banana", "cereza", "pera",  "uva",
+    "mango",  "kiwi",   "sandía",  "melón","naranja",
+    "mandarina", "limón","fresa", "arándano", "piña",
+    "papaya","maracuyá","guayaba","ciruela", "granada"
+]
+fruta = input("ingrese fruta que deseas buscar")
+if fruta in frutas:
+    index= frutas.index(fruta)
+    print(f"si esta, esta el posición{index} ")
