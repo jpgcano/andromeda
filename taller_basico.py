@@ -260,3 +260,15 @@ fruta = input("ingrese fruta que deseas buscar")
 if fruta in frutas:
     index= frutas.index(fruta)
     print(f"si esta, esta el posición{index} ")
+
+
+print   ("------------------------------")
+print   ("Ejercicio 22 - nivel 3")
+"""Lista de números y promedio.."""
+listaNumeros=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+suma =0
+promedio=0
+for numero in listaNumeros:
+    suma += numero
+promedio = suma/len(listaNumeros)
+print(promedio)
