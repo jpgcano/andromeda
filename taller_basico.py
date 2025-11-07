@@ -88,3 +88,28 @@ print   ("Ejercicio 9 - nivel 2")
 for i in range(100):
     # par ="par" if  i %2==0 else "impar"
     print(i,"par" if  i %2==0 else "impar")
+    
+print   ("------------------------------")
+print   ("------------------------------")
+print   ("Ejercicio 10 - nivel 2")
+"""Calculadora básica con +, -, *, /."""
+resultado =""
+num1    = int   (input("Ingrese el primer número: "))
+num2    = int   (input("Ingrese el segundo número: "))
+operacion =int(input("""Ingresa opeación
+                    suma: 1
+                    resta: 2
+                    multiplicación: 3
+                    divición: 4
+                """))
+if (operacion ==    1):
+    resultado    = num1 + num2
+elif (operacion ==  2):
+    resultado    = num1 - num2
+elif (operacion ==  3):
+    resultado    = num1 * num2
+elif (operacion ==  4):
+    resultado    = num1 / num2
+else:
+    print("operación ingrasada no es valida")
+print(f"El resultado es: {resultado}")
