@@ -272,3 +272,11 @@ for numero in listaNumeros:
     suma += numero
 promedio = suma/len(listaNumeros)
 print(promedio)
+
+print   ("------------------------------")
+print   ("Ejercicio 23 - nivel 3")
+"""Números pares: guardar solo los pares."""
+numerosPares=[]
+for i in range(100):
+    numerosPares.append(i)
+print(f"Los numeros pares son: {numerosPares}")
