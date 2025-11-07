@@ -113,3 +113,8 @@ elif (operacion ==  4):
 else:
     print("operación ingrasada no es valida")
 print(f"El resultado es: {resultado}")
+
+print   ("------------------------------")
+print   ("------------------------------")
+print   ("Ejercicio 10 - nivel 2")
+"""Calculadora básica con +, -, *, /."""
