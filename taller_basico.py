@@ -30,7 +30,7 @@ print   ("ejercio 3 nivel 1 ")
 """Área del triángulos"""
 base    = float (input("Ingrese la base del rectángulo: "))
 altura  = float (input("Ingrese la altura del rectángulo: "))
-area    = base * altura
+area    = (base * altura)/2
 print   (f"El area del triangulo es: {area}")
 print   ("------------------------------")
 
@@ -116,5 +116,26 @@ print(f"El resultado es: {resultado}")
 
 print   ("------------------------------")
 print   ("------------------------------")
-print   ("Ejercicio 10 - nivel 2")
-"""Calculadora básica con +, -, *, /."""
+print   ("Ejercicio 11 - nivel 2")
+"""Clasificador de notas (Excelente, Aprobado, Reprobado)."""
+notas =[3.4,5.5,4.5,5,4,3,2,1,0,3,4,5,1]
+for nota in notas:
+    if (nota>=3):
+        print("Execelente" if nota==5 else "Aprobado")
+    else:
+        print("Reprobado")
+
+
+print   ("------------------------------")
+print   ("Ejercicio 12 - nivel 2")
+"""Comparador de tres números: mayor y menor."""
+
+mayor = 0
+menor = 999
+for i in range(3):
+    num = int(input("Digite un numero"))
+    if mayor < num:
+        mayor = num
+    if menor > num:
+        menor = num
+print (f"El numenor mayor es: {mayor} y el menor es: {menor}")
