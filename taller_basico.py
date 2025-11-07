@@ -10,7 +10,24 @@
 """
     Hola usuario: pide al usuario su nombre y edad. Luego imprime un mensaje: "Hola [nombre], tienes [edad] años."
 """
-
+print   ("------------------------------")
+print   ("ejercio 1 ")
 nombre  = input ("por favor Ingrese su nombre: ")
 edad    = int   (input("Por favor ingrese su edadd: "))
 print   (f"Hola {nombre}, tienes {edad} años")
+print   ("------------------------------")
+
+print   ("ejercio 2 ")
+num1    = int   (input("Ingrese el primer número: "))
+num2    = int   (input("Ingrese el segundo número: "))
+suma    = num1 + num2
+print   (f"La suma de {num1} y {num2} es {suma}")
+print   ("------------------------------")
+
+print   ("ejercio 3 ")
+base   = float (input("Ingrese la base del rectángulo: "))
+altura = float (input("Ingrese la altura del rectángulo: "))
+area   = base * altura
+print   ("------------------------------")
+
+print   ("ejercio 4 ")
