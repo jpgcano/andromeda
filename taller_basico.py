@@ -183,3 +183,18 @@ contador = 10
 while contador >=0:
     print(contador)
     contador-=1
+
+
+print   ("------------------------------")
+print   ("Ejercicio 17 - nivel 2")
+"""Adivina el número (usar random)."""
+import random 
+seguir =True
+secreto = int(random.random()*10)
+while seguir == True:
+    numero = int(input("ingrese numero: "))
+    if(numero ==secreto):
+        print("Acertaste, Haz ganado")
+        seguir = False
+    else:
+        print("Fallaste, sigue intentando")
