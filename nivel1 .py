@@ -1,4 +1,4 @@
-"""#--------primer punto--------
+#--------primer punto--------
 #aca utilice 2 variables para pedir el nombre y la edad al usuario
 nombre = input("Ingrese su nombre: ")
 edad = input("Ingrese su edad: ")
@@ -31,7 +31,7 @@ celcius = float(input("Ingrese la temperatura en grados Celsius: "))
 fahrenheit = (celcius * 9/5) + 32
 #este print lo utilice para inprimir la temperatura en fahrenheit
 print("La temperatura en grados Fahrenheit es: ", fahrenheit)
- """
+
  #-------quinto punto--------
  
 #puse cada tipo de variable con la int puse edad ya que es un numero entero
