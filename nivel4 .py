@@ -1,5 +1,4 @@
 #------ primer punto--------
-"""
 #utilice un bucle for para recorrer cada elemento de la lista e imprimir un mensaje que indique que me gusta esa fruta
 lista = ["manzana", "banana", "cereza", "durazno", "uva"]
 for fruta in lista:
@@ -53,7 +52,7 @@ for num in numero:
         pares.append(num)
 print("números en la lista:", numero)
 print("números pares en la lista:", pares)
-"""
+
 #-------sexto punto--------
 #utilice set para eliminar los numeros duplicados de la lista
 #luego converti el set de nuevo a una lista para mostrar el resultado final
@@ -61,4 +60,3 @@ numeros =  [2, 4, 6, 2, 8, 4 , 6,10]
 sinDuplicados = list(set(numeros))
 print("Lista original:", numeros)
 print("Lista sin duplicados:", sinDuplicados)
-
