@@ -53,6 +53,7 @@ elif opcion == 3:
             print("fondos insuficientes.")
 else: 
     print("opcion no valida, intentalo de nuevo.")
+#-------- punto cuatro ---------
 
 estudiantes = []
 while  True: 
@@ -83,4 +84,6 @@ while  True:
         break 
     else:
         print ("opcion no valida. intenta de nuevo.")
-        
+#--------punto cinco ---------
+
+
