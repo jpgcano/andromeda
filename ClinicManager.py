@@ -29,7 +29,7 @@ def RegistrarPacientes ():
             print ("--SALIENDO DEL REGISTRO--")
             break
             
-        RegistrarPacientes ()
+
             
             
             
@@ -50,3 +50,6 @@ def ElininarPacientes():
 def Reporte():
     return
     """
+
+
+RegistrarPacientes ()
