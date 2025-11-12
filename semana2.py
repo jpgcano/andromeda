@@ -1,7 +1,8 @@
-inventario = 
+inventario = {
 producto = []
 precio =[]
 cantidad =[]
+}
 while True: 
     print ("1. agregar producto: ")
     print ("2. mostrar inventario ")
