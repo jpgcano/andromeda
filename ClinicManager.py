@@ -8,14 +8,32 @@ def RegistrarPacientes ():
         print ("2. Ingresa tu nombre completo: ")
         print ("3. Ingresa tu edad: ")
         print ("4. Ingresa tu genero: ")
+        print ("5. Salir. ")
         
         opcion = input("Elige una opcion (1-4): ")
         
         if opcion == "1":
-            nombre = input("ingrese tu nombr: ")
+            CC = input("Ingrese tu numero de identificacion ciudadana: ")
+            print ("Su numero de identificacion es: {CC} ")
+        
+        elif opcion == "2": 
+            nombre = input("Ingrese su nombre completo (nombres y apellidos ): ")
+            print("Su nombre completo es {nombre}")
+        elif opcion == "3":
+            edad = input("Ingresa tu edad: ")
+            print ("Tu edad es {edad} ")
+        elif opcion == 4:
+             genero = input("Cual es tu genero (Masculino , Femenino, Otros ): ")
+             print ("su genero es {genero}")
+        elif opcion == "5": 
+            print ("--SALIENDO DEL REGISTRO--")
+            break
+            
+            
+            
+            
                            
-                       
-                       
+                                     
                        
         
     historial =[]
