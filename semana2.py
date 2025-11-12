@@ -1,7 +1,7 @@
 inventario = {
-producto = []
-precio =[]
-cantidad =[]
+producto :
+precio : 
+cantidad :
 }
 while True: 
     print ("1. agregar producto: ")
@@ -19,13 +19,9 @@ while True:
         print (f"{precio}es el nuevo valor del producto ")
         cantidad = int(input("cual es la cantidad del prodcuto: "))
         inventario.append (cantidad)
-        print (f"{cantidad} es la cantidad del producto ")
-        
+        print (f"{cantidad} es la cantidad del producto ")   
     elif opcion =="2":
-        print (f"producto: {producto} | precio: {precio} | cantidad:{cantidad}")
-        
-
-        
+        print (f"producto: {producto} | precio: {precio} | cantidad:{cantidad}")    
     elif opcion =="4":
         print ("saliendo del menu")
         break
