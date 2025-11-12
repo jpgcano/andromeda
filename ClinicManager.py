@@ -10,7 +10,7 @@ def RegistrarPacientes ():
         print ("4. Ingresa tu genero: ")
         print ("5. Salir. ")
         
-        opcion = input("Elige una opcion (1-4): ")
+        opcion = input("inicia tu registro del (1-4): ")
         
         if opcion == "1":
             CC = input("Ingrese tu numero de identificacion ciudadana: ")
@@ -29,13 +29,14 @@ def RegistrarPacientes ():
             print ("--SALIENDO DEL REGISTRO--")
             break
             
+        RegistrarPacientes ()
             
             
             
                            
                                      
                        
-        
+    """    
     historial =[]
     dianostico=[]
     informacionInicial=()
@@ -48,3 +49,4 @@ def ElininarPacientes():
     return
 def Reporte():
     return
+    """
