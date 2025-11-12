@@ -18,6 +18,7 @@ def RegistrarPacientes ():
         
         elif opcion == "2": 
             nombre = input("Ingrese su nombre completo (nombres y apellidos ): ")
+            nombre.append 
             print("Su nombre completo es {nombre}")
         elif opcion == "3":
             edad = input("Ingresa tu edad: ")
@@ -29,14 +30,12 @@ def RegistrarPacientes ():
             print ("--SALIENDO DEL REGISTRO--")
             break
             
-        RegistrarPacientes ()
-            
             
             
                            
                                      
                        
-    """    
+"""    
     historial =[]
     dianostico=[]
     informacionInicial=()
@@ -50,3 +49,5 @@ def ElininarPacientes():
 def Reporte():
     return
     """
+    
+RegistrarPacientes ()
