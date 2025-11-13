@@ -32,6 +32,9 @@ def RegistrarPacientes():
         elif opcion == "5": 
             print (f"Su registro es ", pacientes)
             break
+        
+        else:
+            print("Error: El dato ingresado no es válido.")
             
             
             
