@@ -42,6 +42,13 @@ def RegistrarPacientes ():
     informacionInicial=()
     return
 def BuscarPacientes():
+    id = int(input("Ingresa el número de documento del paciente: "))
+    valor = input("Por favor ingrese el nombre del paciente: ")
+    for dicc in pacientes:
+        if dicc["nombre"] == valor:
+            return dicc
+        elif dicc["id"] == id:
+            return dicc
     return
 def ActualizarPAcientes(): ### Primero ahcer el buscar pacientes
     return
