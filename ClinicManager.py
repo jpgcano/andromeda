@@ -27,38 +27,47 @@ def MenuBusquedaPacientes():
             """
             )
     return input(" ")
+
 def RegistrarPacientes ():
     historial =[]
-    dianostico=[]
-    informacionInicial=()
+    diagnostico=[]
+    informacionInicial=[ ]
     while True:
         print ("--REGISTRO DE PACIENTES--")
-        print ("1. Ingresa tu numero de CC")
-        print ("2. Ingresa tu nombre completo")
-        print ("3. Ingresa tu edad")
-        print ("4. Ingresa tu genero")
-        print ("5. Salir.")
-        
-        opcion = input("inicia tu registro del (1-4): ")
-        
+        print ("1.Inicie registro de paciente ")
+        print ("4. mostrar registro y salir")
+        dic = {}
+        opcion = input("registrate con la opcion 1 ")
         if opcion == "1":
-            CC = input("Ingrese tu numero de identificacion ciudadana: ")
-            print ("Su numero de identificacion es: {CC} ")
-        
-        elif opcion == "2": 
+            cc = int(input("Ingrese tu numero de identificacion ciudadana: "))
+            dic ["id"] = cc
+            print (f"Su numero de identificacion es: {cc} ")
             nombre = input("Ingrese su nombre completo (nombres y apellidos ): ")
-            print("Su nombre completo es {nombre}")
-        elif opcion == "3":
-            edad = input("Ingresa tu edad: ")
-            print ("Tu edad es {edad} ")
-        elif opcion == 4:
-            genero = input("Cual es tu genero (Masculino , Femenino, Otros ): ")
-            print ("su genero es {genero}")
-        elif opcion == "5": 
-            print ("--SALIENDO DEL REGISTRO--")
+            dic ["nombre"] = nombre
+            print(f"Su nombre completo es {nombre}")
+            edad = int(input("Ingresa tu edad: "))
+            dic ["edad"] = edad 
+            print (f"Tu edad es {edad} ")
+            genero = input("Cual es tu genero: ")
+            dic ["genero"] = genero
+            print (f"Su genero es {genero}")
+            historial = input("historial de usuario: ")
+            dic ["historial"] = historial
+            print(f"el usuario tiene  {historial}")
+            diagnostico=input ("diagnostico del paciente: ")
+            dic["diagnostico"] = diagnostico
+            print (f"el diagnostico del pacientes{diagnostico}")
+            pacientes.append(dic)
+        elif opcion == "4":
+   
+            print (f"Su registro es ", pacientes)
+            
             break
-        return
-
+        else:
+            print ("-------ERROR: Vuelva a registrarse------")    
+       
+          
+RegistrarPacientes()
 def BuscarPacientes():
     """ Función para buscar pacientes"""
     flag =True
