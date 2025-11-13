@@ -66,7 +66,7 @@ def RegistrarPacientes ():
         else:
             print ("-------ERROR: Vuelva a registrarse------")    
         
-RegistrarPacientes()
+#RegistrarPacientes()
 
 
 def BuscarPacientes():
@@ -134,8 +134,27 @@ def EliminarPacientes():
 
     return
 def Reporte():
-    return
+    print("**********************************************")
+    print("     Bienvenido a la sección de reportes     ")
+    menu = f"""
+                Ingrese opción de reporte: 
+                [1] Todos los pacientes registrados
+                [2] Pacientes mayores de 60 años
+                [3] Diagnósticos más frecuentes
+                [4] Cantidad total de pacientes
+            """
+    if menu ==1 and isinstance(menu, int):
+        for paciente in pacientes:
+            print (f"""
+        "id":       {paciente["id"]},
+        "nombre":   {paciente["id"]},                ,
+        "edad":    {paciente["id"]},
+        "genero":  {paciente["id"]},   
+        "diagnostico":{paciente["id"]},
+        "historial":{paciente["id"]},
+                    """)
 
 #RegistrarPacientes()
 #BuscarPacientes()
-EliminarPacientes()
+#EliminarPacientes()
+Reporte()
