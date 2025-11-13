@@ -1,5 +1,3 @@
-
-
 pacientes =[
     {"id": 1,
     "nombre": "Carlos Pérez",
@@ -8,7 +6,7 @@ pacientes =[
     "diagnostico": "Hipertensión",
     "historial": ["Consulta general", "Control presión arterial"]
     },
-      {
+    {
         "id": 2,
         "nombre": "Ana Gómez",
         "edad": 32,
@@ -29,7 +27,6 @@ def MenuBusquedaPacientes():
             """
             )
     return input(" ")
-
 def RegistrarPacientes ():
     historial =[]
     dianostico=[]
@@ -85,41 +82,60 @@ def BuscarPacientes():
             for paciente in pacientes:
                 if nombre in paciente["nombre"].lower():
                     print(paciente)### imprimimos paciente
+                    break
                 else:
                     print("paciente no encontrado") ## imprimimos no encontrado
             break
-        elif menu == 2:
-            try:
-                id_buscar = int(input("Ingrese el ID: "))
-                for id in pacientes:
-                    if id["id"] == id_buscar:
+        elif menu == 2:## validar por IDS
+            try: ## evitamos que nos de un error por ingresar texto en vez de numero
+                id_buscar = int(input("Ingrese el ID: ")) ## capturamos el ID por teclado
+                for paciente in pacientes:  ### recorremos el dicionario para validar si el paciente existe 
+                    if id["id"] == id_buscar: ## Comparar ids
                         print(paciente)
                         break
                     else:
                         print("Usuario no existe")
+                break
             except ValueError:
-                print("El ID debe ser un número.")
-        elif menu == 3:
+                print("El ID debe ser un número.") ## mensaje de error 
+        elif menu == 3: ### consultar por diagnostivo
             diag = input("Ingrese el diagnóstico: ").lower()
-            for paciente in pacientes:
+            for paciente in pacientes: ### recorremos el dicionario para validar si el paciente existe 
                 if diag in paciente["diagnostico"].lower():
                     print("Paciente encontrado:",paciente)
                     break
             else:
                 print("Paciente no encontrado.")
-        elif menu == "4":
-            print("Saliendo del buscador de pacientes.")
-            flag =False
             break
-
+        elif menu == "4":
+            print("Saliendo del buscador de pacientes.") ## saliendo del ciclo 
+            flag =False
         else:
             print("Opción no válida. Intente de nuevo.")
 def ActualizarPacientes(): ### Primero ahcer el buscar pacientes
-    return  
-def ElininarPacientes():
+    return
+def EliminarPacientes():
+    try: ## evitamos que nos de un error por ingresar texto en vez de numero
+        print("ELIMINAR PACIENTES")
+        id_buscar = int(input("Ingrese el ID: ")) ## capturamos el ID por teclado
+        confirmacion = input("Esta seguro que desea eliminar este paciente? [si],[no]").lower()
+        if confirmacion == "si":
+            for index, paciente in enumerate(pacientes):  
+                ### recorremos el dicionario para validar si el paciente existe 
+                ### Nota: enumerate() nos devuelve un index que nos ayuda a eliminar al usuario.
+                if paciente["id"] == id_buscar: ## Comparar ids
+                    pacientes.pop(index)
+                    print("usuario Eliminado")
+                    break
+                else:
+                    print("Usuario no existe")
+    except ValueError:
+        print("El ID debe ser un número.") ## mensaje de error 
+
     return
 def Reporte():
     return
 
 #RegistrarPacientes()
-BuscarPacientes()
+#BuscarPacientes()
+EliminarPacientes()
