@@ -1,8 +1,4 @@
-inventario = {
-producto :
-precio : 
-cantidad :
-}
+
 while True: 
     print ("1. agregar producto: ")
     print ("2. mostrar inventario ")
@@ -21,9 +17,16 @@ while True:
         inventario.append (cantidad)
         print (f"{cantidad} es la cantidad del producto ")   
     elif opcion =="2":
-        print (f"producto: {producto} | precio: {precio} | cantidad:{cantidad}")    
+        print (f"producto : {producto} | precio : {precio} | cantidad : {cantidad}")    
     elif opcion =="4":
         print ("saliendo del menu")
         break
     
+    inventario = {
+"producto" : producto,
+"precio" : precio,
+"cantidad" : cantidad,
+}
+
+
         
