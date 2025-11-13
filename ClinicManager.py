@@ -1,33 +1,36 @@
 
 
-pacientes ={}
-def RegistrarPacientes ():
+pacientes =[]
+def RegistrarPacientes():
     while True:
         print ("--REGISTRO DE PACIENTES--")
         print ("1. Ingresa tu numero de CC: ")
         print ("2. Ingresa tu nombre completo: ")
         print ("3. Ingresa tu edad: ")
         print ("4. Ingresa tu genero: ")
-        print ("5. Salir. ")
+        print ("5. Mostrar registro y salir.")
         
-        opcion = input("inicia tu registro del (1-4): ")
+        
+        opcion = input("inicia tu registro del (1-6): ")
         
         if opcion == "1":
-            CC = input("Ingrese tu numero de identificacion ciudadana: ")
-            print ("Su numero de identificacion es: {CC} ")
-        
+            CC = int(input("Ingrese tu numero de identificacion ciudadana: "))
+            pacientes.append (CC)
+            print (f"Su numero de identificacion es: {CC} ")
         elif opcion == "2": 
             nombre = input("Ingrese su nombre completo (nombres y apellidos ): ")
-            nombre.append 
-            print("Su nombre completo es {nombre}")
+            pacientes.append (nombre)
+            print(f"Su nombre completo es {nombre}")
         elif opcion == "3":
             edad = input("Ingresa tu edad: ")
-            print ("Tu edad es {edad} ")
-        elif opcion == 4:
-             genero = input("Cual es tu genero (Masculino , Femenino, Otros ): ")
-             print ("su genero es {genero}")
+            pacientes.append (edad)
+            print (f"Tu edad es {edad} ")
+        elif opcion == "4":
+             genero = input("Cual es tu genero: ")
+             pacientes.append (genero)
+             print (f"Su genero es {genero}")
         elif opcion == "5": 
-            print ("--SALIENDO DEL REGISTRO--")
+            print (f"Su registro es ", pacientes)
             break
             
             
@@ -50,4 +53,4 @@ def Reporte():
     return
     """
     
-RegistrarPacientes ()
+RegistrarPacientes()
