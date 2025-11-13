@@ -1,7 +1,40 @@
 
 
-pacientes ={}
+pacientes =[
+    {"id": 1,
+    "nombre": "Carlos Pérez",
+    "edad": 45,
+    "genero": "Masculino",
+    "diagnostico": "Hipertensión",
+    "historial": ["Consulta general", "Control presión arterial"]
+    },
+      {
+        "id": 2,
+        "nombre": "Ana Gómez",
+        "edad": 32,
+        "genero": "Femenino",
+        "diagnostico": "Diabetes",
+        "historial": ["Chequeo anual", "Control de glucosa"]
+    }
+]
+
+def MenuBusquedaPacientes():
+    print("*******************************")
+    print ("Buscar por: ")
+    print(f""" 
+            1- Nombre parcial
+            2- ID
+            3- Diagnóstico 
+            4- Salir
+            """
+            )
+    return input(" ")
+
+""" 
 def RegistrarPacientes ():
+    historial =[]
+    dianostico=[]
+    informacionInicial=()
     while True:
         print ("--REGISTRO DE PACIENTES--")
         print ("1. Ingresa tu numero de CC: ")
@@ -28,35 +61,58 @@ def RegistrarPacientes ():
         elif opcion == "5": 
             print ("--SALIENDO DEL REGISTRO--")
             break
-            
 
-            
-            
-            
-                           
-                                     
-                       
-    """    
-    historial =[]
-    dianostico=[]
-    informacionInicial=()
-    return
+        return
+"""
+
 def BuscarPacientes():
-    id = int(input("Ingresa el número de documento del paciente: "))
-    valor = input("Por favor ingrese el nombre del paciente: ")
-    for dicc in pacientes:
-        if dicc["nombre"] == valor:
-            return dicc
-        elif dicc["id"] == id:
-            return dicc
-    return
-def ActualizarPAcientes(): ### Primero ahcer el buscar pacientes
+    """ Función para buscar pacientes"""
+    flag =True
+    while flag:
+        """ entramos en un ciclo  para interactuar dentro del menú"""    
+        menu = int(MenuBusquedaPacientes()) # llamamos a la función menú
+        if menu == 1: ## comparamos el menú con la condición de nombre
+            ### pedimos ingresar el nombre del paciente
+            nombre = input("Por favor ingrese el nombre del paciente: ").lower() 
+            ### recorremos el dicionario para validar si el paciente existe 
+            for paciente in pacientes:
+                if nombre in paciente["nombre"].lower():
+                    print(paciente)### imprimimos paciente
+                else:
+                    print("paciente no encontrado") ## imprimimos no encontrado
+            break
+        elif menu == 2:
+            try:
+                id_buscar = int(input("Ingrese el ID: "))
+                for id in pacientes:
+                    if id["id"] == id_buscar:
+                        print(paciente)
+                        break
+                    else:
+                        print("Usuario no existe")
+            except ValueError:
+                print("El ID debe ser un número.")
+        elif menu == 3:
+            diag = input("Ingrese el diagnóstico: ").lower()
+            for paciente in pacientes:
+                if diag in paciente["diagnostico"].lower():
+                    print("Paciente encontrado:",paciente)
+                    break
+            else:
+                print("Paciente no encontrado.")
+        elif menu == "4":
+            print("Saliendo del buscador de pacientes.")
+            flag =False
+            break
+
+        else:
+            print("Opción no válida. Intente de nuevo.")
+def ActualizarPacientes(): ### Primero ahcer el buscar pacientes
     return
 def ElininarPacientes():
     return
 def Reporte():
     return
-    """
 
-
-RegistrarPacientes ()
+#RegistrarPacientes()
+BuscarPacientes()
