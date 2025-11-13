@@ -59,17 +59,11 @@ def RegistrarPacientes ():
             print (f"el diagnostico del pacientes{diagnostico}")
             pacientes.append(dic)
         elif opcion == "4":
-   
             print (f"Su registro es ", pacientes)
             
             break
         else:
             print ("-------ERROR: Vuelva a registrarse------")    
-<<<<<<< HEAD
-=======
-       
-          
-RegistrarPacientes()
 def BuscarPacientes():
     """ Función para buscar pacientes"""
     flag =True
@@ -114,7 +108,6 @@ def BuscarPacientes():
         else:
             print("Opción no válida. Intente de nuevo.")
 
->>>>>>> d1c26ef7b48c99710e0ccb419ceb881c3b56f5b4
 
 
 def BuscarPacientes():
@@ -176,12 +169,7 @@ def actualizacion_edad():
                 print("Usuario no existe")
     except ValueError:
         print("El ID debe ser un número.") ## mensaje de error 
-
     return pacientes
-
-print(actualizacion_edad())
-
-
 def actualizar_diagnostico():
     try: ## evitamos que nos de un error por ingresar texto en vez de numero
         id_buscar = int(input("Ingrese el ID del paciente: "))
@@ -221,9 +209,28 @@ def actualizacion_historial():
 
     return
 def Reporte():
+    print("**********************************************")
+    print("     Bienvenido a la sección de reportes     ")
+    menu = int(input(f"""
+                Ingrese opción de reporte: 
+                [1] Todos los pacientes registrados
+                [2] Pacientes mayores de 60 años
+                [3] Diagnósticos más frecuentes
+                [4] Cantidad total de pacientes
+            """))
+    if menu ==1 and isinstance(menu, int):
+        for paciente in pacientes:
+            print (f"""
+        "id":       {paciente["id"]},
+        "nombre":   {paciente["nombre"]},                ,
+        "edad":    {paciente["edad"]},
+        "genero":  {paciente["genero"]},   
+        "diagnostico":{paciente["diagnostico"]},
+        "historial":{paciente["historial"]},
+                    """)
     return
 
-
+Reporte()
 
 
 def EliminarPacientes():
@@ -243,13 +250,8 @@ def EliminarPacientes():
                     print("Usuario no existe")
     except ValueError:
         print("El ID debe ser un número.") ## mensaje de error 
-
-    return
-def Reporte():
     return
 
-Reporte()
-=======
 while True:
     print("--MENÚ PRINCIPAL--")
     print("¡Bienvenido al menú principal!¿Qué quieres hacer el día de hoy?")
@@ -280,8 +282,3 @@ while True:
 
     else:
         print("Error: Por favor ingrese un número válido.")
-
-
-
-
->>>>>>> d1c26ef7b48c99710e0ccb419ceb881c3b56f5b4
