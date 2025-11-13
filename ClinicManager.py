@@ -264,16 +264,13 @@ while True:
         print(RegistrarPacientes())
 
     elif opcion == 3:
-        print(ActualizarPacientes())
-
-    elif opcion == 4:
         print(EliminarPacientes())
 
-    elif opcion == 5:
+    elif opcion == 4:
         print()
         break
 
-    elif opcion == 6:
+    elif opcion == 5:
         print()
 
     else:
