@@ -60,7 +60,7 @@ def RegistrarPacientes ():
             print (f"el historial de los pacientes registrados es ", historial)
         
         elif opcion == "3": 
-            print (f"Su registro es ", Pacientes)
+            print (f"Su registro es ", pacientes)
             
             break
         else:
