@@ -1,4 +1,4 @@
-pacientes =[
+pacientes = [
     {"id": 1,
     "nombre": "Carlos Pérez",
     "edad": 45,
@@ -13,7 +13,168 @@ pacientes =[
         "genero": "Femenino",
         "diagnostico": "Diabetes",
         "historial": ["Chequeo anual", "Control de glucosa"]
-    }
+    },
+    {
+        "id": 3,
+        "nombre": "Luis Martínez",
+        "edad": 67,
+        "genero": "Masculino",
+        "diagnostico": "Artritis",
+        "historial": ["Control de dolor", "Fisioterapia"]
+    },
+    {
+        "id": 4,
+        "nombre": "María Rodríguez",
+        "edad": 58,
+        "genero": "Femenino",
+        "diagnostico": "Hipotiroidismo",
+        "historial": ["Chequeo hormonal", "Control trimestral"]
+    },
+    {
+        "id": 5,
+        "nombre": "José Ramírez",
+        "edad": 71,
+        "genero": "Masculino",
+        "diagnostico": "Insuficiencia cardíaca",
+        "historial": ["Electrocardiograma", "Control con cardiólogo"]
+    },
+    {
+        "id": 6,
+        "nombre": "Laura Herrera",
+        "edad": 29,
+        "genero": "Femenino",
+        "diagnostico": "Asma",
+        "historial": ["Evaluación pulmonar", "Ajuste de inhalador"]
+    },
+    {
+        "id": 7,
+        "nombre": "Miguel Torres",
+        "edad": 63,
+        "genero": "Masculino",
+        "diagnostico": "Colesterol alto",
+        "historial": ["Examen de sangre", "Control nutricional"]
+    },
+    {
+        "id": 8,
+        "nombre": "Patricia Mendoza",
+        "edad": 54,
+        "genero": "Femenino",
+        "diagnostico": "Migrañas crónicas",
+        "historial": ["Neurología", "Control de medicamentos"]
+    },
+    {
+        "id": 9,
+        "nombre": "Andrés López",
+        "edad": 23,
+        "genero": "Masculino",
+        "diagnostico": "Alergias estacionales",
+        "historial": ["Pruebas de alergia", "Tratamiento antihistamínico"]
+    },
+    {
+        "id": 10,
+        "nombre": "Claudia Silva",
+        "edad": 75,
+        "genero": "Femenino",
+        "diagnostico": "Osteoporosis",
+        "historial": ["Densitometría ósea", "Suplementación de calcio"]
+    },
+    {
+        "id": 11,
+        "nombre": "Diego Cárdenas",
+        "edad": 41,
+        "genero": "Masculino",
+        "diagnostico": "Gastritis crónica",
+        "historial": ["Endoscopia", "Control gastroenterológico"]
+    },
+    {
+        "id": 12,
+        "nombre": "Elena Vargas",
+        "edad": 68,
+        "genero": "Femenino",
+        "diagnostico": "Enfermedad pulmonar obstructiva crónica",
+        "historial": ["Evaluación respiratoria", "Terapia inhalada"]
+    },
+    {
+    "id": 13,
+    "nombre": "Rosa Castillo",
+    "edad": 62,
+    "genero": "Femenino",
+    "diagnostico": "Diabetes",
+    "historial": ["Control de glucosa", "Consulta general"]
+},
+{
+    "id": 14,
+    "nombre": "Fernando Duarte",
+    "edad": 47,
+    "genero": "Masculino",
+    "diagnostico": "Hipertensión",
+    "historial": ["Electrocardiograma", "Control presión arterial"]
+},
+{
+    "id": 15,
+    "nombre": "Juliana Patiño",
+    "edad": 26,
+    "genero": "Femenino",
+    "diagnostico": "Asma",
+    "historial": ["Evaluación pulmonar", "Ajuste de inhalador"]
+},
+{
+    "id": 16,
+    "nombre": "Santiago Ríos",
+    "edad": 38,
+    "genero": "Masculino",
+    "diagnostico": "Migrañas crónicas",
+    "historial": ["Neurología", "Control de medicamentos"]
+},
+{
+    "id": 17,
+    "nombre": "Gloria Méndez",
+    "edad": 73,
+    "genero": "Femenino",
+    "diagnostico": "Artritis",
+    "historial": ["Control de dolor", "Fisioterapia"]
+},
+{
+    "id": 18,
+    "nombre": "Eduardo Molina",
+    "edad": 52,
+    "genero": "Masculino",
+    "diagnostico": "Diabetes",
+    "historial": ["Chequeo anual", "Control de glucosa"]
+},
+{
+    "id": 19,
+    "nombre": "Camila Torres",
+    "edad": 34,
+    "genero": "Femenino",
+    "diagnostico": "Hipertensión",
+    "historial": ["Control presión arterial", "Revisión médica"]
+},
+{
+    "id": 20,
+    "nombre": "Óscar López",
+    "edad": 66,
+    "genero": "Masculino",
+    "diagnostico": "Artritis",
+    "historial": ["Fisioterapia", "Control de dolor"]
+},
+{
+    "id": 21,
+    "nombre": "Valentina Sánchez",
+    "edad": 22,
+    "genero": "Femenino",
+    "diagnostico": "Asma",
+    "historial": ["Control respiratorio", "Ajuste de medicamentos"]
+},
+{
+    "id": 22,
+    "nombre": "Jorge Cáceres",
+    "edad": 59,
+    "genero": "Masculino",
+    "diagnostico": "Migrañas crónicas",
+    "historial": ["Consulta neurológica", "Control mensual"]
+}
+
 ]
 
 def MenuBusquedaPacientes():
@@ -27,17 +188,15 @@ def MenuBusquedaPacientes():
             """
             )
     return input(" ")
-
 def RegistrarPacientes ():
     historial =[]
     diagnostico=[]
-    informacionInicial=[ ]
     while True:
         print ("--REGISTRO DE PACIENTES--")
         print ("1.Inicie registro de paciente ")
-        print ("4. mostrar registro y salir")
+        print ("2. mostrar registro y salir")
         dic = {}
-        opcion = input("registrate con la opcion 1 ")
+        opcion = input("registrate con la opcion: ")
         if opcion == "1":
             cc = int(input("Ingrese tu numero de identificacion ciudadana: "))
             dic ["id"] = cc
@@ -58,12 +217,12 @@ def RegistrarPacientes ():
             dic["diagnostico"] = diagnostico
             print (f"el diagnostico del pacientes{diagnostico}")
             pacientes.append(dic)
-        elif opcion == "4":
-            print (f"Su registro es ", pacientes)
-            
+        elif opcion == "2":
+            print (f"Su registro es ", dic)
             break
         else:
             print ("-------ERROR: Vuelva a registrarse------")    
+    return
 def BuscarPacientes():
     """ Función para buscar pacientes"""
     flag =True
@@ -107,9 +266,6 @@ def BuscarPacientes():
             flag =False
         else:
             print("Opción no válida. Intente de nuevo.")
-
-
-
 def BuscarPacientes():
     """ Función para buscar pacientes"""
     flag =True
@@ -153,8 +309,6 @@ def BuscarPacientes():
             flag =False
         else:
             print("Opción no válida. Intente de nuevo.")
-
-
 def actualizacion_edad():
     try: ## evitamos que nos de un error por ingresar texto en vez de numero
         id_buscar = int(input("Ingrese el ID del paciente: ")) ## capturamos el ID por teclado
@@ -181,9 +335,6 @@ def actualizar_diagnostico():
                 print("El ID del paciente no existe.")
     except ValueError:
         print("Error: El ID debe ser un número.")
-
-
-
 def actualizacion_historial():
     try: ## evitamos que nos de un error por ingresar texto en vez de numero
         print("ACTUALIZACIÓN DEL PACIENTE")
@@ -218,19 +369,43 @@ def Reporte():
             """))
     if menu ==1 and isinstance(menu, int):
         for paciente in pacientes:
+            print("*******************************************")
             print (f"""
-        "id":       {paciente["id"]},
-        "nombre":   {paciente["nombre"]},                ,
-        "edad":    {paciente["edad"]},
-        "genero":  {paciente["genero"]},   
-        "diagnostico":{paciente["diagnostico"]},
-        "historial":{paciente["historial"]},
+        Cedula:         {paciente["id"]},
+        nombre:         {paciente["nombre"]},                ,
+        edad:           {paciente["edad"]},
+        genero:         {paciente["genero"]},   
+        diagnostico:    {paciente["diagnostico"]},
+        historial:      {paciente["historial"]},
                     """)
+    elif  menu ==2 and isinstance(menu, int):
+        print("*********************************************")
+        for paciente in pacientes:  ### recorremos el dicionario para validar si el paciente existe 
+            if paciente["edad"] >= 60: ## Comparar ids
+                print("*******************************************")
+                print (f"""
+                    Cedula:         {paciente["id"]},
+                    nombre:         {paciente["nombre"]},                ,
+                    edad:           {paciente["edad"]},
+                    genero:         {paciente["genero"]},   
+                    diagnostico:    {paciente["diagnostico"]},
+                    historial:      {paciente["historial"]},
+                                """)
+    elif menu ==3 and isinstance(menu, int):
+        diagnostico = [paciente["diagnostico"] for paciente in pacientes]
+        cont ={}
+        for diag in diagnostico:
+            cont[diag] = cont.get(diag,0)+1
+        top = sorted(cont.items(), key=lambda x:x[1], reverse=True)
+        for t in top:
+            print(f"{t} \n")
+    elif menu ==4 and isinstance(menu, int):
+        cont = 0
+        for paciente in pacientes:
+            cont +=1
+        print(f"Total de pacientes de la clinica es: ",cont)
+        
     return
-
-Reporte()
-
-
 def EliminarPacientes():
     try: ## evitamos que nos de un error por ingresar texto en vez de numero
         print("ELIMINAR PACIENTES")
@@ -299,5 +474,4 @@ while True:
         print("Gracias por usar nuestro servicio, te esperamos pronto.")
         break
     else:
-        print("Error: Por favor ingrese un número válido.")
-        
+        print("Error: Por favor ingrese un número válido.")   
