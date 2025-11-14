@@ -1,0 +1,56 @@
+pacientes =[
+    {"id": 1,
+    "nombre": "Carlos Pérez",
+    "edad": 45,
+    "genero": "Masculino",
+    "diagnostico": "Hipertensión",
+    "historial": ["Consulta general", "Control presión arterial"]
+    },
+    {
+        "id": 2,
+        "nombre": "Ana Gómez",
+        "edad": 32,
+        "genero": "Femenino",
+        "diagnostico": "Diabetes",
+        "historial": ["Chequeo anual", "Control de glucosa"]
+    }
+]
+# Lista de pacientes
+pacientes = [
+    {
+        "id": 1,
+        "nombre": "Carlos Pérez",
+        "edad": 45,
+        "genero": "Masculino",
+        "diagnostico": "Hipertensión",
+        "historial": ["Consulta general", "Control presión arterial"]
+    },
+    {
+        "id": 2,
+        "nombre": "Ana Gómez",
+        "edad": 32,
+        "genero": "Femenino",
+        "diagnostico": "Diabetes",
+        "historial": ["Chequeo anual", "Control de glucosa"]
+    }
+]
+
+# Solicitar ID y nuevo registro
+id_buscar = int(input("Ingrese el ID del paciente: "))
+nuevo_registro = input("Ingrese el nuevo registro para el historial: ")
+
+# Buscar y actualizar historial
+encontrado = False
+for paciente in pacientes:
+    if paciente["id"] == id_buscar:
+        paciente["historial"].append(nuevo_registro)
+        print(f"Registro agregado al historial de {paciente['nombre']}.")
+        encontrado = True
+        break
+
+if not encontrado:
+    print("No se encontró un paciente con ese ID.")
+
+# Mostrar resultado
+for p in pacientes:
+    print(p)
