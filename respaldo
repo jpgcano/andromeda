@@ -54,3 +54,8 @@ if not encontrado:
 # Mostrar resultado
 for p in pacientes:
     print(p)
+
+
+
+
+
