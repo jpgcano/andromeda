@@ -1,25 +1,31 @@
 class Producto:
     def __init__(self):
-        self.producto=[]
+        self.productos={}
+        
     def Agregar(self):
-        while True:
-            nombre = input("Ingresa nombre del producto")
-            precio = float(input("-ingrese valor del producto"))
-            cantidad = int(input("Ingrese la cantidad de productos"))
-            agregar= input("Continuar agregando SI:[s], NO:[n]")
-            if isinstance(nombre(str)) and isinstance(precio(int,float)) and isinstance(cantidad(int)):
-                self.producto["nombre"].append(nombre)
-                self.producto["precio"].append(precio)
-                self.producto["cantidad"].append(cantidad)
-            print(f"producto ingresado correctamente {self.producto}")
-            if agregar.lower() =="n":
-                break
+            dic ={}
+            nombre = input("Ingresa nombre del producto:  ")
+            precio = float(input("-ingrese valor del producto:  "))
+            cantidad = int(input("Ingrese la cantidad de productos:  "))
+            dic["precio"]=precio
+            dic["cantidad"]=cantidad
+            self.productos[nombre]=(dic)
+
     def Mostrar(self):
-        return print(self.producto)
-
-
-
-
+        for nombre, info in self.productos.items():
+            print(f"{nombre}: Precio :{info['precio']}; Cantidad :{info['cantidad']}")
+        return
+    def Estadistica(self):
+        menu =  int(input("""
+                [1] Valor total del inventario
+                [2] Cantidad todal de productos 
+                """))
+        if menu ==1:
+            total = 0
+            for producto ,items in self.productos.items():
+                total = (items['cantidad']*items['precio'])
+                print(f"{producto}:  /n  Precio :{items['precio']}\n  Cantidad :{items['cantidad']}") 
+        return
 def Menu():
         return """ 
             1- Agregar  Producto
